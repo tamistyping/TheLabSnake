@@ -26,7 +26,7 @@ h1 {
     text-align: center;
     text-shadow: 1px 1px black;
     padding-top: 0;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
     color: greenyellow;
     font-size: 2.5vmin;
 }
@@ -43,28 +43,21 @@ h1 {
     border: 2vmin solid greenyellow;
     border-radius: 2%;
     box-shadow: 0 0 20px 0 black;
-    height: 100vh;
-    height: 550px;
-    width: 550px;
+    height: 700vh;
+    height: 500px;
+    width: 500px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 .board div {
     border: 1px solid rgb(69, 80, 77);
-    background-color: rgb(154, 149, 149);
+    background-color: rgb(184, 179, 179);
     flex-grow: 1;
     height: 10%;
     width: 10%;
 }
-
-/* 
-.high-score {
-    text-align: center;
-    padding-top: 2%;
-    margin-bottom: 15vmin;
-    margin-top: 0vmin;
-} */
 
 .food {
     background-image: url(/Users/tekkytam/code/TheLabSnake/assets/food.png);
@@ -97,11 +90,12 @@ h1 {
 }
 
 div .snake {
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
 }
 
 div .dead {
     background-color: black;
+    box-shadow: 0 0 50px 0 red;
 }
 
 .start {
@@ -132,11 +126,9 @@ div .dead {
 }
 
 div .head {
-    background-color: white;
+    background-color: rgb(32, 104, 55);
     display: flex;
-    
 }
-
 
 .end-page {
     position: fixed;

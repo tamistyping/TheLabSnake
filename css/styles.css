@@ -66,8 +66,8 @@ h1 {
     margin-top: 0vmin;
 } */
 
-.green {
-    background-image: url(/Users/tekkytam/code/TheLabSnake/assets/green.png);
+.food {
+    background-image: url(/Users/tekkytam/code/TheLabSnake/assets/food.png);
     background-repeat: no-repeat;
     background-size: contain;
 }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="js/app.js" charset="utf-8"></script>
+</head>
+<body>
+
+    <div class="start-page">
+        <h1>LAB SNAKE</h1>
+        <button id="startGame">START GAME</button>
+    </div>
+    <div class="game-page" style="display: none;">
+        <h1>LAB SNAKE</h1>
+        <button id="mute">🔊</button>
+        <section class="score">POINTS: </section>
+        <section class="board-wrapper">
+            <div class="board"></div>
+        </section>
+        <!-- <section class="high-score">HIGH SCORE: </section> -->
+    </div>
+    <div class="end-page">
+        <h1 id="endScore">YOU SCORED:</h1>
+        <button id="reset"> PLAY AGAIN?</button>   
+    </div>
+    <audio id="background-music" loop>
+        <source src="/Users/tekkytam/code/TheLabSnake/audio.mp3">
+    </audio>
+    <audio id="eat">
+        <source src="/Users/tekkytam/code/TheLabSnake/eat.mp3">
+    </audio>
+    <!-- <script>
+        document.getElementById('startGame').addEventListener('click', () => {
+            document.getElementById("background-music").play()
+        })
+        let song = document.getElementById("background-music")
+        song.volume = 0.1
+    </script> -->
+</body>
+</html>

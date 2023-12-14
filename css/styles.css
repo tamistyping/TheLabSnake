@@ -1,0 +1,186 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Permanent Marker';
+}
+
+body {
+    background: linear-gradient(0deg, rgba(92,225,230,1) 0%, rgba(140,82,255,1) 100%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(68, 35, 9);
+    text-shadow: 3px 2px greenyellow;
+    font-size: 10vmin;
+    margin-bottom: 1%;
+}
+
+#mute {
+    margin-left: 80%;
+    margin-top: 0;
+}
+
+.score {
+    text-align: center;
+    text-shadow: 1px 1px black;
+    padding-top: 0;
+    margin-bottom: 3%;
+    color: greenyellow;
+    font-size: 2.5vmin;
+}
+
+.board-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2vmin solid greenyellow;
+    border-radius: 2%;
+    box-shadow: 0 0 20px 0 black;
+    height: 100vh;
+    height: 550px;
+    width: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+.board div {
+    border: 1px solid rgb(69, 80, 77);
+    background-color: rgb(154, 149, 149);
+    flex-grow: 1;
+    height: 10%;
+    width: 10%;
+}
+
+/* 
+.high-score {
+    text-align: center;
+    padding-top: 2%;
+    margin-bottom: 15vmin;
+    margin-top: 0vmin;
+} */
+
+.green {
+    background-image: url(/Users/tekkytam/code/TheLabSnake/assets/green.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.blue {
+    background-image: url(/Users/tekkytam/code/TheLabSnake/assets/blue.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.orange {
+    background-image: url(/Users/tekkytam/code/TheLabSnake/assets/orange.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.purple {
+    background-image: url(/Users/tekkytam/code/TheLabSnake/assets/purple.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.red {
+    background-image: url(/Users/tekkytam/code/TheLabSnake/assets/red.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+div .snake {
+    background-color: whitesmoke;
+}
+
+div .dead {
+    background-color: black;
+}
+
+.start {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 5vmin;
+}
+
+.start-page {
+    display: flex;
+    height: 100vmin;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#startButton {
+    padding: 10;
+
+}
+
+.game-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+div .head {
+    background-color: white;
+    display: flex;
+    
+}
+
+
+.end-page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    height: 20vmin;
+    width: 60vmin;
+    background: linear-gradient(0deg, rgba(92,225,230,1) 0%, rgb(224, 6, 6) 100%);
+    text-align: center;
+    box-shadow: 0 0 20px 0 black;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+#reset {
+    padding: 1vmin;
+    font-size: 2vmin;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+#reset:hover{
+    scale: 1.1;
+    background-color: greenyellow;
+}
+
+#endScore {
+   padding-top: 1vmin;
+}
+
+#startGame {
+    padding: 1vmin;
+    font-size: 2vmin;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+#startGame:hover {
+    scale: 1.1;
+    background-color: greenyellow;
+}

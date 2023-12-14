@@ -77,19 +77,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let snakeTimer;
     let snakeDirection = 1;
     let gameOver = false;
-    // let newInterval = 750
+    
 
     // configure food
     let foodPosition = Math.floor(Math.random() * cellCount);
-    //song
+    // song
     let biteSound = new Audio("eat.mp3");
     biteSound.volume = 0.3;
 
     //! FUNCTIONS
-
-    // function updateHighScore() {
-
-    // }
 
     function eatSound() {
       if (biteSound.paused || biteSound.ended) {
@@ -182,7 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!cells[snake[0]].classList.contains("food")) {
           snake.pop();
         } else {
-          // newInterval -= 50
           console.log(newInterval);
           eatFood();
         }
@@ -236,8 +231,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       createFood();
 
-      if (newInterval > 150) {
-        newInterval -= 30;
+      if (newInterval > 200) {
+        newInterval -= 25;
       }
 
       clearInterval(snakeTimer);

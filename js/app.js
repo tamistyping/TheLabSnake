@@ -50,9 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function openSound() {
     song.play();
   }
+
+  let highScore = 0
   function init() {
     endPage.style.display = "none";
-
     //! VARIABLES & ELEMENTS
 
     muteButton.addEventListener("click", toggleSound);
@@ -66,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cellCount = width * height;
     let pointsScore = 0;
     let points = document.querySelector(".score");
+    let highestScore = document.querySelector(".high-score");
     let cells = [];
     let newInterval = 550;
     points.innerText = `POINTS: 0`;
@@ -77,17 +79,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let snakeTimer;
     let snakeDirection = 1;
     let gameOver = false;
-    
 
     // configure food
     let foodPosition = Math.floor(Math.random() * cellCount);
-    let snakeFood = ['red', 'food', 'orange', 'purple', 'blue']
-    let randomColor = snakeFood[Math.floor(Math.random()*snakeFood.length)]
+    let snakeFood = ["red", "food", "orange", "purple", "blue"];
+    let randomColor = snakeFood[Math.floor(Math.random() * snakeFood.length)];
+
     // sounds
     let biteSound = new Audio("eat.mp3");
     biteSound.volume = 0.15;
-    let deadSound = new Audio("dead.mp3")
-    deadSound.volume = 0.8
+    let deadSound = new Audio("dead.mp3");
+    deadSound.volume = 0.8;
 
     //! FUNCTIONS
 
@@ -104,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function deadNoise() {
-        deadSound.play()
+      deadSound.play();
     }
 
     function createBoard() {
@@ -121,6 +123,14 @@ document.addEventListener("DOMContentLoaded", () => {
       createFood();
     }
 
+    function checkHighScore() {
+      if (pointsScore > highScore) {
+        highScore = pointsScore;
+        highestScore.innerText = `HIGHEST SCORE: ${highScore}`;
+      } else {
+        return;
+      }
+    }
     createBoard();
 
     function addSnake() {
@@ -136,10 +146,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function createFood() {
-        
       cells[foodPosition].classList.remove(randomColor); //remove food on board
       foodPosition = Math.floor(Math.random() * cellCount); //create random space
-      randomColor = snakeFood[Math.floor(Math.random()*snakeFood.length)] 
+      randomColor = snakeFood[Math.floor(Math.random() * snakeFood.length)];
       cells[foodPosition].classList.add(randomColor); //add it to random space
 
       if (snake.includes(foodPosition)) {
@@ -237,6 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
       eatSound();
       pointsScore++;
       points.innerText = `POINTS: ${pointsScore}`;
+      checkHighScore();
       console.log("snake after eating: ", snake);
 
       createFood();
@@ -286,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function deadState() {
-        deadNoise()
+      deadNoise();
       gameOver = true;
       console.log(snake);
       snake.forEach((snakeIndex) => {

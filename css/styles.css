@@ -26,7 +26,15 @@ h1 {
     text-align: center;
     text-shadow: 1px 1px black;
     padding-top: 0;
-    margin-bottom: 5%;
+    color: greenyellow;
+    font-size: 2.5vmin;
+}
+
+.high-score {
+    text-align: center;
+    text-shadow: 1px 1px black;
+    padding-top: 0;
+    margin-bottom: 2%;
     color: greenyellow;
     font-size: 2.5vmin;
 }
@@ -92,6 +100,7 @@ h1 {
 div .snake {
     background-color: rgb(255, 255, 255);
 }
+
 
 div .dead {
     background-color: black;

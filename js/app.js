@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let foodPosition = Math.floor(Math.random() * cellCount);
     // song
     let biteSound = new Audio("eat.mp3");
-    biteSound.volume = 0.3;
+    biteSound.volume = 0.15;
 
     //! FUNCTIONS
 

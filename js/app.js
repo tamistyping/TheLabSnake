@@ -81,6 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // configure food
     let foodPosition = Math.floor(Math.random() * cellCount);
+    let snakeFood = ['red', 'food', 'orange', 'purple', 'blue']
+    let randomColor = snakeFood[Math.floor(Math.random()*snakeFood.length)]
     // sounds
     let biteSound = new Audio("eat.mp3");
     biteSound.volume = 0.15;
@@ -134,12 +136,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function createFood() {
-      cells[foodPosition].classList.remove("food"); //remove food on board
+        
+      cells[foodPosition].classList.remove(randomColor); //remove food on board
       foodPosition = Math.floor(Math.random() * cellCount); //create random space
-      cells[foodPosition].classList.add("food"); //add it to random space
+      randomColor = snakeFood[Math.floor(Math.random()*snakeFood.length)] 
+      cells[foodPosition].classList.add(randomColor); //add it to random space
 
       if (snake.includes(foodPosition)) {
-        cells[foodPosition].classList.remove("food");
+        cells[foodPosition].classList.remove(randomColor);
         createFood();
       }
     }
@@ -181,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
           deadState();
         }
 
-        if (!cells[snake[0]].classList.contains("food")) {
+        if (!cells[snake[0]].classList.contains(randomColor)) {
           snake.pop();
         } else {
           console.log(newInterval);
@@ -268,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
           clearInterval(snakeTimer);
         }
 
-        if (!cells[snake[0]].classList.contains("food")) {
+        if (!cells[snake[0]].classList.contains(randomColor)) {
           snake.pop();
         } else {
           console.log(newInterval);

@@ -81,9 +81,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // configure food
     let foodPosition = Math.floor(Math.random() * cellCount);
-    // song
+    // sounds
     let biteSound = new Audio("eat.mp3");
     biteSound.volume = 0.15;
+    let deadSound = new Audio("dead.mp3")
+    deadSound.volume = 0.8
 
     //! FUNCTIONS
 
@@ -97,6 +99,10 @@ document.addEventListener("DOMContentLoaded", () => {
         biteSound.currentTime = 0;
         biteSound.play();
       }
+    }
+
+    function deadNoise() {
+        deadSound.play()
     }
 
     function createBoard() {
@@ -276,6 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function deadState() {
+        deadNoise()
       gameOver = true;
       console.log(snake);
       snake.forEach((snakeIndex) => {

@@ -66,25 +66,25 @@ h1 {
 }
 
 .blue {
-    background-image: url(Users/tekkytam/code/TheLabSnake/assets/blue.png);
+    background-image: url(../assets/blue.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .orange {
-    background-image: url(Users/tekkytam/code/TheLabSnake/assets/orange.png);
+    background-image: url(../assets/orange.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .purple {
-    background-image: url(Users/tekkytam/code/TheLabSnake/assets/purple.png);
+    background-image: url(../assets/purple.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .red {
-    background-image: url(Users/tekkytam/code/TheLabSnake/assets/red.png);
+    background-image: url(../assets/red.png);
     background-repeat: no-repeat;
     background-size: contain;
 }

@@ -60,7 +60,7 @@ h1 {
 }
 
 .food {
-    background-image: url(/Users/tekkytam/code/TheLabSnake/assets/food.png);
+    background-image: url(../Users/tekkytam/code/TheLabSnake/assets/food.png);
     background-repeat: no-repeat;
     background-size: contain;
 }

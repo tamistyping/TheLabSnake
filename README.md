@@ -4,7 +4,7 @@ I used HTML5, CSS & JavaScript to create this game.
 
 https://tamistyping.github.io/TheLabSnake/ //you can access the game using this link
 
-Anyway, this game took me 5 days to code & below summarises the steps I took to complete this magnificent game!
+I had 5 days to complete this game & below summarises the steps I took to complete this magnificent game!
 
 
 
@@ -29,7 +29,7 @@ Anyway, this game took me 5 days to code & below summarises the steps I took to 
       }
   ```
 
-2) I then created 'random' test tubes to appear around the board. I started with declaring the variables & then defined a createFood() function.
+2) I then created 'random' test tubes to appear around the board. I started with declaring the variables & then defining createFood() function.
 ```
   let foodPosition = Math.floor(Math.random() * cellCount);
   let snakeFood = ["red", "food", "orange", "purple", "blue"];
@@ -92,9 +92,9 @@ Anyway, this game took me 5 days to code & below summarises the steps I took to 
           }
 ```
 
-5) I then created a points variable and kept track of pointsScore. Every time ‘eatFood()’ gets called, the points go up by 1.
+5) I then created a points variable and kept track of pointsScore. Every time ‘eatFood()’ gets called, points++.
 
-6) Then I added another IF statement whereby the game would reset if the snake 'ate' itself.
+6) I added another IF statement whereby the game would reset if the snake 'ate' itself.
 
 ```
    if (snake.includes(headPosition)) {
